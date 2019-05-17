@@ -1,0 +1,53 @@
+def bemvindo ():
+  print('''
+  Bem vindo à Calculadora 
+  ''')
+
+def calculadora ():
+  operador = input('''
+  Por favor, digite a operação matemática que você gostaria de completar:
+  + para adição
+  - para subtração
+  * para multiplicação
+  / para divisão
+  ''')
+
+  number_1 = int(input ('entre com o primeito número'))
+  number_2 = int(input('entre com o segundo número'))
+
+  if operador == '+':
+    print ('{}+{}='.format(number_1, number_2))
+    print(number_1 + number_2)
+
+  elif operador == '-':
+      print ('{}-{}='.format(number_1, number_2))
+      print(number_1 - number_2)
+
+  elif operador == '*':
+      print ('{}*{}='.format(number_1, number_2))
+      print(number_1 * number_2)
+
+  elif operador == '/':
+      print ('{}/{}='.format(number_1, number_2))
+      print(number_1 / number_2)
+    
+  else:
+      print('você não digitou um operador válido, por favor execute o programa novamente')
+
+  again()
+
+def again():
+  calc_again = input ('''
+  Você quer calcular de novo?
+  Por favor digite S para sim e N e para não
+  ''')
+  
+  if calc_again.upper() == 'S':
+      calculadora ()
+  elif calc_again.upper() == "N":
+      print( 'até logo')
+  else: 
+      again ()
+
+bemvindo()
+calculadora()********
